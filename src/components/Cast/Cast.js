@@ -20,7 +20,7 @@ const Cast = () => {
       data.cast && setCast(data.cast);
     }
     handleFetch();
-  }, []);
+  });
 
   return (
     <div>

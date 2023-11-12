@@ -13,7 +13,7 @@ const Reviews = () => {
       data.results && setReviews(data.results);
     }
     handleFetch();
-  }, []);
+  });
 
   return (
     <div>

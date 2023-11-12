@@ -30,7 +30,7 @@ const MoviePage = () => {
       setMovieInfo({ ...data });
     }
     handleFetch();
-  }, []);
+  }, [movieId]);
 
   const { poster_path, vote_average, overview, genres, name } = movieInfo;
   return (

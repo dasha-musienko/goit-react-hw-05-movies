@@ -24,6 +24,7 @@ const MoviesPage = () => {
       return;
     }
     handleFetch();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleInput = evt => {
