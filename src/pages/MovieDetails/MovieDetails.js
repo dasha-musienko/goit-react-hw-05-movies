@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { useParams, Outlet, useLocation } from 'react-router-dom';
-import { fetchMovieDetails } from 'components/api';
+import { fetchMovieDetails } from 'api';
 import {
   BackLink,
   DetailLink,

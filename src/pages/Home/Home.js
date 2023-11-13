@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import { fetchTrendingMovies } from 'components/api';
+import { fetchTrendingMovies } from 'api';
 import {
   HomeWrapper,
   MoviesItem,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import {  useLocation, useSearchParams } from 'react-router-dom';
-import { fetchMoviesByQuery } from 'components/api';
+import { fetchMoviesByQuery } from 'api';
 import { MoviesWrapper, SearchBar, SearchBtn, SearchInput } from './Movies.styled';
 import {
   MoviesItem,
