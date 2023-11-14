@@ -22,6 +22,8 @@ const Cast = () => {
     handleFetch();
   });
 
+  const defaultImg = 'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700'
+
   return (
     <div>
       {cast.length > 0 ? (
@@ -29,17 +31,10 @@ const Cast = () => {
           {cast.map(({ profile_path, name, character, id }) => {
             return (
               <CastItemWrapper key={id}>
-                {profile_path ? (
-                  <CastItemImg
-                    src={`https://image.tmdb.org/t/p/w200/${profile_path}`}
+                <CastItemImg
+                    src={profile_path ? `https://image.tmdb.org/t/p/w200/${profile_path}` : defaultImg}
                     alt="character"
                   />
-                ) : (
-                  <CastItemImg
-                    src="https://pixabay.com/get/g0665b0a2029a2cd5f16df3e58f252e7ba0eec9586a6f803d8eb19c896acb68227a210fe8e79d577298d894c07ab89845b1c6610dd3bc5e1347f37896e5d8a8d4_1280.png"
-                    alt="poster"
-                  />
-                )}
                 <CastItemName>{name}</CastItemName>
                 <CastItemRole>Role: {character}</CastItemRole>
               </CastItemWrapper>

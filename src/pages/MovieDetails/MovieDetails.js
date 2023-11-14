@@ -33,6 +33,8 @@ const MoviePage = () => {
   }, [movieId]);
 
   const { poster_path, vote_average, overview, genres, name } = movieInfo;
+  const defaultImg =
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
   return (
     <MovieDetailsWrapper>
       <BackLink to={backLink.current}>
@@ -42,12 +44,15 @@ const MoviePage = () => {
       {name !== 'AxiosError' ? (
         <MovieDetailsContainer>
           <MovieInfoContainer>
-            {poster_path && (
-              <MovieImage
-                src={`https://image.tmdb.org/t/p/w400/${poster_path}`}
-                alt="poster"
-              />
-            )}
+            <MovieImage
+              src={
+                poster_path
+                  ? `https://image.tmdb.org/t/p/w400/${poster_path}`
+                  : defaultImg
+              }
+              alt="character"
+            />
+
             <InfoWrapper>
               <MovieHeading>{movieInfo.title}</MovieHeading>
               {vote_average && (
